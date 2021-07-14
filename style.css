@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+    background-color: rgb(1, 1, 105) !important;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.defo{
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: large;
+    color: red;
+    word-spacing: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+::selection{
+    background-color: transparent;
+    color: gold;
+    text-shadow: 0 2px black,2px 0 black,0 -2px black,-2px 0 black;
+}
+
+.drop{
+    background-color: #329595;
+    height: 610px;
+    width: 96%;
+    display: flex;
+    margin: 10px auto;
+    position: sticky;
+    border-radius: 10px;
+    box-shadow:  -10px -10px 20px #364444,
+             10px 10px 20px #364444;
+}
+.host{
+    width: 30%;
+    height: 300px;
+    position: sticky;
+    margin: 10px 50px 50px 30px;
+}
+h4{
+    font-family: 'Righteous', cursive;
+    position: unset;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #CC5500;
+    right: 10%;
+    word-spacing: 900px;
+    font-size: large;
+}
+
+.user{
+    width: 60%;
+    height: 0;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    padding-bottom: calc(30/9*16);
+}
+.user video{
+    position: relative !important;
+    justify-content: space-around;
+    background: #329595;
+    box-shadow:  -10px -10px 20px #143c3c,
+             10px 10px 20px #2d8888;
+    border: 15px 15px solid green !important;
+    box-sizing: border-box;
+    margin: auto 0;
+}
+
+input[type="checkbox"]{
+    opacity: 0;
+    transform: translate(19px);
+}
+
+.videochkin:checked+span{
+    color: red;
+}
+.audiochkin:checked+span{
+    color: red;
+}
+.scrnchkin:checked+span{
+    color: red;
+}
+
+.opts{
+    display: flex;
+    transform: translate(10px,400px);
+    font-size: 40px;
+    word-spacing: 60px;
+}
+.navu{
+    font-size: 20px;
+    transform: translate(80px,410px);
+    word-spacing: 75px;
+}
+/* .clearfix bshadow0 pbs:checked + p{
+    opacity: 1;
+} 
+.icon-video-svgrepo-com p{
+    opacity: 0;
+    font-size: larger;
+    font-weight: bolder;
+    transform: translate(201px,-22px);
+}*/
+
+/* ------------------------------------------------------------------------------------------------ */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?mg1kgo');
+    src:  url('fonts/icomoon.eot?mg1kgo#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?mg1kgo') format('truetype'),
+      url('fonts/icomoon.woff?mg1kgo') format('woff'),
+      url('fonts/icomoon.svg?mg1kgo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak-as: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-microphone-svgrepo-com:before {
+    content: "\e900";
+  }
+  .icon-video-svgrepo-com:before {
+    content: "\e901";
+  }
+  .icon-upload2:before {
+    content: "\e9c6";
+  }
+  
