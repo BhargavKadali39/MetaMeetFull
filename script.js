@@ -1,6 +1,9 @@
 
 
 
+let audio = false;
+let mystream;
+let video = false;
 let client = AgoraRTC.createClient({
     mode: "rtc",
     codec: "vp8",
@@ -32,10 +35,6 @@ client.on("stream-subscribed", function(evt){
     user.appendChild(div);
     stream.play(streamId);
 });
-
-let audio = false;
-let mystream;
-let video = false;
 
 let vdchkin = document.getElementById("vdchkin");
 vdchkin.addEventListener('change',function listp(){
