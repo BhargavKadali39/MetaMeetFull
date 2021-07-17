@@ -1,26 +1,32 @@
 
 
 
-let audio = false;
-let mystream;
-let video = false;
 let client = AgoraRTC.createClient({
     mode: "rtc",
     codec: "vp8",
 });
-
-client.init("89bb664a7d9348a1820df17d708bae53");
-client.join("00689bb664a7d9348a1820df17d708bae53IADyTwJd6pp9qH21qOPwzglU1Kwvcgx2J42AfoTmmhKt0IZuzlEAAAAAEAAoIaFGoCr0YAEAAQCcKvRg",
- "hero", null, (uid)=>{
+let AppID = "89bb664a7d9348a1820df17d708bae53";
+let token = "00689bb664a7d9348a1820df17d708bae53IABkoS4u/ORoVA583vQTv16O8kDQ2A+Ga7G597XF58FtQHpejJEAAAAAEAAoIaFGek70YAEAAQB1TvRg";
+let channel = "ere";
+client.init(AppID);
+client.join(token,
+    channel, null, (uid)=>{
     let localStream = AgoraRTC.createStream({
         audio: true,
         video: true,
+        
     });
     localStream.init(()=>{
         mystream = localStream;
         localStream.play("hosty");
         client.publish(localStream);
     });});
+
+
+
+    document.getElementById("insert").innerHTML = "appid: " + AppID  + " channel: " + channel + "<br>" + "token: "+ token;
+
+
 
 client.on("stream-added", function (evt){
     client.subscribe(evt.stream);
@@ -35,6 +41,10 @@ client.on("stream-subscribed", function(evt){
     user.appendChild(div);
     stream.play(streamId);
 });
+
+let audio = false;
+let mystream;
+let video = false;
 
 let vdchkin = document.getElementById("vdchkin");
 vdchkin.addEventListener('change',function listp(){
@@ -54,10 +64,11 @@ adchkin.addEventListener('change',function lista(){
         mystream.unmuteAudio();
     }
 })
-    // function screensh(){
-    //         AgoraRTC.createScreenVideoTrack({
-    //             encoderConfig: "1080p_1",
-    //         }, "enable").then([screenVideoTrack, screenAudioTrack] => {
-    //             /** ... **/
-    //         });
-    // }
+let scchkin = document.getElementById("scchkin");
+scchkin.addEventListener('change',function listsc(){
+    if (scchkin.checked) {
+        window.open("indexShare.html");
+            
+    }
+})
+
