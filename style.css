@@ -4,6 +4,8 @@
 
 body{
     background-color: rgb(1, 1, 105) !important;
+    transition: all 1s ease-in-out;
+    zoom: 99%;
 }
 *{
     padding: 0;
@@ -16,6 +18,7 @@ body{
     color: red;
     word-spacing: 10px;
     margin-bottom: 20px;
+    cursor: default;
     letter-spacing: 3px;
 }
 ::selection{
@@ -50,6 +53,7 @@ h4{
     right: 10%;
     word-spacing: 900px;
     font-size: large;
+    cursor: default;
 }
 
 .user{
@@ -71,6 +75,9 @@ h4{
     box-sizing: border-box;
     margin: auto 0;
 }
+.host,.user video{
+    cursor: crosshair;
+}
 
 input[type="checkbox"]{
     opacity: 0;
@@ -86,18 +93,29 @@ input[type="checkbox"]{
 .scrnchkin:checked+span{
     color: red;
 }
-
+span{
+    cursor: pointer;
+}
 .opts{
     display: flex;
-    transform: translate(10px,400px);
+    transform: translate(10px,430px);
     font-size: 40px;
     word-spacing: 60px;
 }
 .navu{
     font-size: 20px;
-    transform: translate(80px,410px);
+    transform: translate(80px,440px);
     word-spacing: 75px;
+    cursor: default;
 }
+#insert{
+    color: rgb(0, 244, 252);
+    margin-left: 30px;
+    word-spacing: 40px;
+    cursor: text;
+    white-space: nowrap;
+}
+
 /* .clearfix bshadow0 pbs:checked + p{
     opacity: 1;
 } 
