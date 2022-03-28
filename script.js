@@ -1,10 +1,10 @@
 
 
-
 let client = AgoraRTC.createClient({
     mode: "rtc",
     codec: "vp8",
-});
+}
+);
 let AppID = "89bb664a7d9348a1820df17d708bae53";
 let token = "00689bb664a7d9348a1820df17d708bae53IAD4KixtP7mhORpkXxNEohELqbn0FLEVUk75CWsaaHw8iXpejJEAAAAAEADnfDPKb4I4YgEAAQBqgjhi";
 let channel = "ere";
@@ -15,16 +15,18 @@ client.join(token,
         audio: true,
         video: true,
         
-    });
+    }
+);
     localStream.init(()=>{
         mystream = localStream;
         localStream.play("hosty");
         client.publish(localStream);
-    });});
+    });
+});
 
 
 
-    document.getElementById("insert").innerHTML = "appid: " + AppID  + " channel: " + channel + "<br>" + "token: "+ token;
+document.getElementById("insert").innerHTML = "appid: " + AppID  + " channel: " + channel + "<br>" + "token: "+ token;
 
 
 
@@ -63,12 +65,14 @@ adchkin.addEventListener('change',function lista(){
     } else {
         mystream.unmuteAudio();
     }
-})
+}
+)
 let scchkin = document.getElementById("scchkin");
 scchkin.addEventListener('change',function listsc(){
     if (scchkin.checked) {
         window.open("indexShare.html");
             
     }
-})
+}
+)
 
