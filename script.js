@@ -6,7 +6,7 @@ let client = AgoraRTC.createClient({
 }
 );
 let AppID = "89bb664a7d9348a1820df17d708bae53";
-let token = "00689bb664a7d9348a1820df17d708bae53IAD4KixtP7mhORpkXxNEohELqbn0FLEVUk75CWsaaHw8iXpejJEAAAAAEADnfDPKb4I4YgEAAQBqgjhi";
+let token = "00689bb664a7d9348a1820df17d708bae53IADuj4fz7uL46Si/nqZcwtCQpKtl6NjIzqF4a/mwcfhJBnpejJEAAAAAEAAQvmMDqcdeYgEAAQCkx15i";
 let channel = "ere";
 client.init(AppID);
 client.join(token,
